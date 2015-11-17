@@ -12,7 +12,8 @@ Router.route('/', {
   subscriptions: function() {
     return [
       Meteor.subscribe('events'),
-      Meteor.subscribe('categories')
+      Meteor.subscribe('categories'),
+      Meteor.subscribe('kopajUser')
     ];
   } 
 });

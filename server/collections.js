@@ -5,3 +5,7 @@ Meteor.publish('events', function () {
 Meteor.publish('categories', function () {
   return Categories.find({});
 });
+
+Meteor.publish('kopajUser', function () {
+  return kopajUser.find({});
+});
