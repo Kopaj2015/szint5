@@ -6,6 +6,6 @@ Meteor.publish('categories', function () {
   return Categories.find({});
 });
 
-Meteor.publish('kopajUser', function () {
-  return kopajUser.find({});
+Meteor.publish('kopajUsers', function () {
+  return Categories.find({});
 });
