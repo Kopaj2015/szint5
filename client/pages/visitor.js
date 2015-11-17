@@ -1,6 +1,6 @@
 Template.visitor.helpers({
 
-: getcategories: function() {
+ getcategories: function() {
     return categories.find({});
   }
   
