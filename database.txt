@@ -1,9 +1,9 @@
 Categories.insert({
-name: "labdajátékok",
+name: "ballgames",
 });
 Categories.insert({
-name: "athletika",
+name: "athletics",
 });
 Categories.insert({
-name: "vizisportok",
+name: "watergames",
 });
