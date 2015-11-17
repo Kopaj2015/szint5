@@ -1,9 +1,18 @@
 Categories.insert({
-name: "ballgames",
+name: "labdajátékok",
 });
 Categories.insert({
-name: "athletics",
+name: "athletika",
 });
 Categories.insert({
-name: "watergames",
+name: "vizisportok",
+});
+
+Events.insert({
+	name: "valami",
+	place:"helyszín",
+	date: valami ido nézz utána hogy kell mongoba,
+	firstTeam: valamelyik team id,
+	secondTeam: másik team id,
+	winner: firstTeam/secondTeam/nem veszel fel winnert ha nincs
 });
