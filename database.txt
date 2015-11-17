@@ -1,0 +1,9 @@
+Categories.insert({
+name: "labdajátékok",
+});
+Categories.insert({
+name: "athletika",
+});
+Categories.insert({
+name: "vizisportok",
+});
