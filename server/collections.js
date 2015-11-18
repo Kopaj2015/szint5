@@ -24,5 +24,12 @@ Meteor.methods({
         result: result
       });
     }
-  }
+  },
+  addEvent: function(categoryName) {
+    if(Meteor.user()) {
+      Events.insert({
+        name: categoryName
+      });
+    }
+  },
 });

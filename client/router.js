@@ -60,6 +60,18 @@ Router.route('/admin/addevent', {
   } 
 });
 
+Router.route('/admin/addcategory', {
+  name:     'addCategory',
+  template: 'addCategory',
+  subscriptions: function() {
+    return [
+      Meteor.subscribe('events'),
+      Meteor.subscribe('categories'),
+      Meteor.subscribe('kopajUsers')
+    ];
+  } 
+});
+
 Router.route('/user', {
   name:     'user',
   template: 'user',
