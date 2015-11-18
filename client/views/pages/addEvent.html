@@ -1,39 +1,58 @@
 <template name="addEvent">
 	<div class= "main_div">
-		Welcome at Best-bet! 
+		<div class="addEventTitle">
+		Welcome, Admin! 
+		</div>
 		<form>
 		<h2> Add event </h2>
-		Team 1:
-		<select>
-		{{#each getUsers}}
-  			<option value={{_id}}>{{username}}</option>
-		{{/each}}
-		</select>
-		Team 2:
-		<select>
-		{{#each getUsers}}
-  			<option value={{_id}}>{{username}}</option>
-		{{/each}}
-		</select>
-		Category:
-		<select>
-		{{#each getCategories}}
-  			<option value={{_id}}>{{name}}</option>
-		{{/each}}
-		</select>
-		Name:
-		<input type="text" name="name"> 
-		Place:
-		<input type="text" name="place"> 
-		<br />
-		Time:
-		<input type="text" name="time">
-		
-
-		Result:
-		<input type="text" name="result">
-
-		<button name = "submit"> Submit </button>
+		<table class="addEventTable">
+			<tr>
+				<td>Team 1:</td>
+				<td><select>
+					{{#each getUsers}}
+					<option value={{_id}}>{{username}}</option>
+					{{/each}}
+				</select></td>
+			</tr>
+			<tr>
+				<td>Team 2:</td>
+				<td><select>
+					{{#each getUsers}}
+						<option value={{_id}}>{{username}}</option>
+					{{/each}}
+					</select></td>
+			</tr>
+			<tr>
+				<td>Category:</td>
+				<td><select>
+					{{#each getCategories}}
+						<option value={{_id}}>{{name}}</option>
+					{{/each}}
+				</select></td>
+			</tr>
+			<tr>
+				<td>Name:</td>
+				<td>
+					<input type="text" name="name"> 
+				</td>
+			</tr>
+			<tr>
+				<td>Place:</td>
+				<td>
+					<input type="text" name="place">
+				</td>
+			</tr>
+			<tr>
+				<td>Time:</td>
+				<td>
+					<input type="text" name="time">
+				</td>
+			</tr>
+			<tr>
+				<td>Result:</td><td><input type="text" name="result"></td>
+			</tr>
+		</table>
+		<div class="addEventSubmit" ><button name = "submit"> Submit </button></div>
 		</form>
 	</div>
 </template>
