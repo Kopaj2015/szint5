@@ -5,7 +5,7 @@ Template.visitor.helpers({
   	},
 
   	getLatestEvents: function(){
-  		return Events.find({}, { sort: { date: -1, limit: 5}});
+  		return Events.find({}, { sort: {  limit: 5}});
   	}
 });
 
