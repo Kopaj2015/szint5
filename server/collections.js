@@ -25,9 +25,9 @@ Meteor.methods({
       });
     }
   },
-  addEvent: function(categoryName) {
+  addCategory: function(categoryName) {
     if(Meteor.user()) {
-      Events.insert({
+      Categories.insert({
         name: categoryName
       });
     }
