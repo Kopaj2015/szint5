@@ -14,9 +14,7 @@
 			Sports			
 			</button>	
 			<ul class="dropdown-menu" id="dropdown-menu">
-				<li><a href="#">Sport1</a></li>
-				<li><a href="#">Sport2</a></li>
-				<li><a href="#">Sport3</a></li>
+				{{#each getCategories}}<li><a href="/event/{{_id}}">{{name}}</a></li>{{/each}}
 			</ul>
 		</div> 
 		

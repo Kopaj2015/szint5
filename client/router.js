@@ -36,10 +36,21 @@ Router.route('/admin', {
   template: 'admin',
   onBeforeAction: function (pause) {
     	if (!Meteor.user()) {
-            // render the login template but keep the url in the browser the same
             Router.go('/');
         }
     },
+  subscriptions: function() {
+    return [
+      Meteor.subscribe('events'),
+      Meteor.subscribe('categories'),
+      Meteor.subscribe('kopajUsers')
+    ];
+  } 
+});
+
+Router.route('/admin/addevent', {
+  name:     'addEvent',
+  template: 'addEvent',
   subscriptions: function() {
     return [
       Meteor.subscribe('events'),
@@ -54,7 +65,6 @@ Router.route('/user', {
   template: 'user',
   onBeforeAction: function (pause) {
     	if (!Meteor.user()) {
-            // render the login template but keep the url in the browser the same
             Router.go('/');
         }
     },

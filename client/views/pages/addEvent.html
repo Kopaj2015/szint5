@@ -1,0 +1,27 @@
+<template name="addEvent">
+	<div class= "main_div">
+		Welcome at Best-bet! 
+		<h2> Add event </h2>
+		Team 1:
+		<select>
+		{{#each getUsers}}
+  			<option value={{_id}}>{{username}}</option>
+		{{/each}}
+		</select>
+		Team 2:
+		<select>
+  			<option value="volvo">Volvo</option>
+		</select>
+		Name:
+		<input type="text" name="name"> 
+		Place:
+		<input type="text" name="place"> 
+		Time:
+		<input type="text" name="time">
+		<br />
+
+		Winner:
+		<input type="text" name="time">
+
+	</div>
+</template>
