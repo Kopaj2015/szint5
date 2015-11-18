@@ -1,5 +1,8 @@
 <template name = "header">
-	<div class="banner">			
+	<div class="banner">	
+		<a href="/"><div class="bannerTitle">
+			BEST-BET
+		</div></a>
 		<div  id="login">
 			{{> loginButtons}}
 		</div>
@@ -7,7 +10,7 @@
 	</div>
 	<div class="menusor">
 		<div id="menu_pont">
-			<a href="/product/asd">Home</a>
+			<a href="/">Home</a>
 		</div>
 		<div class="dropdown" id="menu_pont">
 			<button class="btn btn-primary dropdown-toggle" id="dropdown-button"  data-toggle="dropdown">
@@ -23,6 +26,9 @@
 		</div>
 		<div id="menu_pont">
 			<a href="/product/asd">Results</a>
+		</div>
+		<div id="menu_pont">
+			<a href="/admin">Add event</a>
 		</div>
 	</div>
 </template>
