@@ -12,13 +12,17 @@ Meteor.publish('kopajUsers', function () {
 
 
 Meteor.methods({
-  addKevent: function(event) {
+  addEvent: function(firstTeam,secondTeam,category,eventName,place,eventTime,result) {
     if(Meteor.user()) {
-      /*Events.insert({
-        userId:  Meteor.user()._id,
-        message: message,
-        createdAt: new Date()
-      });*/
+      Events.insert({
+        firstTeam: firstTeam,
+        secondTeam: secondTeam,
+        category: category,
+        name: eventName,
+        place: place,
+        time: eventTime,
+        result: result
+      });
     }
   }
 });

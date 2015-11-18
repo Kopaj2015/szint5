@@ -4,30 +4,30 @@
 		<form>
 		<h2> Add event </h2>
 		Team 1:
-		<select>
+		<select name="firstTeam">
 		{{#each getUsers}}
   			<option value={{_id}}>{{username}}</option>
 		{{/each}}
 		</select>
 		Team 2:
-		<select>
+		<select name="secondTeam">
 		{{#each getUsers}}
   			<option value={{_id}}>{{username}}</option>
 		{{/each}}
 		</select>
 		Category:
-		<select>
+		<select name="category">
 		{{#each getCategories}}
   			<option value={{_id}}>{{name}}</option>
 		{{/each}}
 		</select>
 		Name:
-		<input type="text" name="name"> 
+		<input type="text" name="eventName"> 
 		Place:
 		<input type="text" name="place"> 
 		<br />
 		Time:
-		<input type="text" name="time">
+		<input type="text" name="eventTime">
 		
 
 		Result:
