@@ -72,6 +72,18 @@ Router.route('/admin/addcategory', {
   } 
 });
 
+Router.route('results', {
+  name:     'results',
+  template: 'results',
+  subscriptions: function() {
+    return [
+      Meteor.subscribe('events'),
+      Meteor.subscribe('categories'),
+      Meteor.subscribe('kopajUsers')
+    ];
+  } 
+});
+
 Router.route('/user', {
   name:     'user',
   template: 'user',
@@ -87,4 +99,18 @@ Router.route('/user', {
       Meteor.subscribe('kopajUsers')
     ];
   } 
+});
+Router.route('/events/:category', {
+    template: 'events',
+	  subscriptions: function() {
+    return [
+      Meteor.subscribe('events'),
+      Meteor.subscribe('categories'),
+      Meteor.subscribe('kopajUsers')
+    ];
+  }, 
+    data: function(){
+        var currentCategory = this.params.category;
+		return currentCategory;
+    }
 });
